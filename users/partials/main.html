@@ -1,0 +1,47 @@
+<form class="form-inline">
+    <div class="control-group">
+        <div class="btn-group pull-left">
+            <a class="btn dropdown-toggle nomargin" data-toggle="dropdown" href="#">Actions <span class="caret icon-white"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/#/users/new">Create User</a></li>
+                <li class="dropdown-submenu">
+                    <a>Manage</a>
+                    <ul class="dropdown-menu">
+                        <li><a data-toggle="modal" sl-dialog-modal="(users,createGroupModal)" sl-dialog-context="userGroups">Groups</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group pull-left" style="margin-right:5px;" >
+            <a class="btn dropdown-toggle nomargin" data-toggle="dropdown" href="#">Bulk actions <span class="caret icon-white"></span></a>
+            <ul class="dropdown-menu">
+                <li><a ng-click="removeSelected()">Delete selected</a></li>
+            </ul>
+        </div>
+        <div class="btn-group pull-left">
+            <a data-target="#" data-toggle="dropdown" class="btn white-btn dropdown-toggle nomargin" role="button">
+                Groups
+                <span class="caret"></span>
+            </a>
+            <ul sl-groups-list context="groups" class="dropdown-menu" ng-model="groups">
+                <li ng-repeat="group in groups">
+                    <label><input type="checkbox" ng-click="toggleFilter(group.id)" value="{{group.name}}">{{group.name}}</label>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group pull-left">
+            <a data-target="#" data-toggle="dropdown" class="btn white-btn dropdown-toggle nomargin" role="button">
+                Roles
+                <span class="caret"></span>
+            </a>
+            <ul sl-roles-list context="roles" class="dropdown-menu" ng-model="roles">
+                <li ng-repeat="role in roles">
+                    <label><input type="checkbox" ng-click="toggleFilter(role.id)" value="{{role.name}}">{{role.name}}</label>
+                </li>
+            </ul>
+        </div>
+        <!--<button class="btn-link">Advanced</button>-->
+    </div>
+</form>
+
+<div sl-users-table-list></div>

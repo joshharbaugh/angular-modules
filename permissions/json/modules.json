@@ -1,0 +1,249 @@
+{
+	"modules": [
+	{
+		"name": "Module 1",
+	    "permissions": [{
+	    	"name": "Permission 1",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "active"
+	    	}]	         
+	    }, {
+	    	"name": "Permission 2",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }],
+	    "roles": [{
+			"name": "Administrator",
+			"status": "active"
+		}, {
+			"name": "Power User",
+			"status": "indeterminate"
+		}, {
+			"name": "Normal User",
+			"status": "indeterminate"
+		}, {
+			"name": "Guest",
+			"status": "indeterminate"
+		}]
+	},
+	{
+	    "name": "Module 2",
+	    "permissions": [{
+	    	"name": "Permission 1",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }, {
+	    	"name": "Permission 2",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }],
+	    "roles": [{
+			"name": "Administrator",
+			"status": "active"
+		}, {
+			"name": "Power User",
+			"status": "active"
+		}, {
+			"name": "Normal User",
+			"status": "indeterminate"
+		}, {
+			"name": "Guest",
+			"status": "inactive"
+		}]
+	},
+	{
+	    "name": "Module 3",
+	    "permissions": [{
+	    	"name": "Permission 1",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }, {
+	    	"name": "Permission 2",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }],
+	    "roles": [{
+			"name": "Administrator",
+			"status": "active"
+		}, {
+			"name": "Power User",
+			"status": "active"
+		}, {
+			"name": "Normal User",
+			"status": "indeterminate"
+		}, {
+			"name": "Guest",
+			"status": "inactive"
+		}]
+	},
+	{
+	    "name": "Module 4",
+	    "permissions": [{
+	    	"name": "Permission 1",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }, {
+	    	"name": "Permission 2",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }],
+	    "roles": [{
+			"name": "Administrator",
+			"status": "indeterminate"
+		}, {
+			"name": "Power User",
+			"status": "inactive"
+		}, {
+			"name": "Normal User",
+			"status": "inactive"
+		}, {
+			"name": "Guest",
+			"status": "inactive"
+		}]
+	},
+	{
+	    "name": "Module 5",
+	    "permissions": [{
+	    	"name": "Permission 1",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "active"
+	    	}]	         
+	    }, {
+	    	"name": "Permission 2",
+	    	"description": "Optional description goes here",
+	    	"roles": [{
+	    		"name": "Administrator",
+	    		"status": "active"
+	    	}, {
+	    		"name": "Power User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Normal User",
+	    		"status": "inactive"
+	    	}, {
+	    		"name": "Guest",
+	    		"status": "inactive"
+	    	}]	         
+	    }],
+	    "roles": [{
+			"name": "Administrator",
+			"status": "active"
+		}, {
+			"name": "Power User",
+			"status": "indeterminate"
+		}, {
+			"name": "Normal User",
+			"status": "indeterminate"
+		}, {
+			"name": "Guest",
+			"status": "indeterminate"
+		}]
+	}
+	]
+}

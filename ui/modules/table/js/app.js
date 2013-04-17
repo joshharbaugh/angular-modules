@@ -1,0 +1,1 @@
+sl.require('sl.ui.table', 'ngGrid');

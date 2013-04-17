@@ -1,0 +1,23 @@
+{
+	"organizations" : [
+	{
+		"name": "Homenet",
+		"roles": [
+		{
+			"name": "Power User"
+		},
+		{
+			"name": "Guest"
+		}]
+	},
+	{
+		"name": "Showroom Logic",
+		"roles": [
+		{
+			"name": "Administrator"
+		},
+		{
+			"name": "Power User"
+		}]
+	}]
+}

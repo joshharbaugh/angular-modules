@@ -1,0 +1,16 @@
+<div ng-controller="SignInBoxCtrl">
+	<div class="ajax-loading" ng-show="isLoading"></div>
+	<div id="signinHold" style="display: none;"> 
+		<div class="imgContain">
+			<img alt="Showroom Logic" src="img/logo_large.png">
+		</div>
+		<div class="signin">
+		  
+		  	<h2>{{error}}</h2>
+			<input size="30" type="email" id="signin-email" placeholder="Email" ng-change="validate()" ng-model="email">
+			<input size="30" type="password" id="signin-password" placeholder="Password" ng-change="validate()" ng-model="password">
+			<button class="btn btn-inverse btn-large" id="signin-btn" ng-disabled="!isValid" ng-click="submit()">Sign In</button>
+
+		</div>
+	</div>
+</div>

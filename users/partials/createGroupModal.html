@@ -1,0 +1,35 @@
+<div id="userGroupsModal" data-ng-controller="UserGroupsCtrl">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>User Groups</h3>
+    </div>
+    <div class="modal-body">
+        <div class="alert alert-error" data-ng-show="error.length > 0">{{error}}</div>
+        <div class="alert alert-success" data-ng-show="alert.length > 0">{{alert}}</div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#new" data-toggle="tab">New</a></li>
+            <li><a href="#groups" data-toggle="tab">Groups</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active fade in" id="new">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <h5>Group name:</h5>
+                        <input type="text" value="" class="pull-left" ng-model="newGroup">
+                        <button type="button" class="btn white-btn pull-left btn-mini" ng-click="createGroup()">Create</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="groups">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div sl-user-groups-table-list></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn orange-btn btn-save" ng-click="done()">Done</button>
+    </div>
+</div>

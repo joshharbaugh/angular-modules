@@ -1,0 +1,24 @@
+<div id="createRoleModal" data-ng-controller="CreateRoleCtrl">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Add Role</h3>
+    </div>
+    <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active fade in" id="info">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h5>Role Name:</h5>
+                        <input type="text" data-provide="typeahead" ng-model="typeaheadModel" sl-typeahead="roles">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn orange-btn btn-save" ng-click="createRole()">Save</button>
+    </div>
+</div>

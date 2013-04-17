@@ -1,0 +1,66 @@
+{
+	"users": [
+	{
+	    "ID": "1",
+	    "First": "Chris",
+	    "Last": "Brantley",
+	    "Username": "chris@showroomlogic.com",
+	    "Organization": "Showroom Logic",
+	    "Roles": [
+	        "Administrator",
+	        "Power User"
+	    ],
+	    "Status": "active"
+	}, {
+	    "ID": "2",
+	    "First": "Josh",
+	    "Last": "Harbaugh",
+	    "Username": "josh@showroomlogic.com",
+	    "Organization": "Showroom Logic",
+	    "Roles": [
+	        "Power User"
+	    ],
+	    "Status": "inactive"
+	}, {
+	    "ID": "3",
+	    "First": "Aaron",
+	    "Last": "Pace",
+	    "Username": "aaron@showroomlogic.com",
+	    "Organization": "Showroom Logic",
+	    "Roles": [
+	    	"Administrator",
+	    	"Power User"
+	    ],
+	    "Status": "active"
+	}, {
+	    "ID": "4",
+	    "First": "Kelly",
+	    "Last": "Te Huna",
+	    "Username": "kelly@showroomlogic.com",
+	    "Organization": "Showroom Logic",
+	    "Roles": [
+	    	"Power User"
+	    ],
+	    "Status": "inactive"
+	}, {
+	    "ID": "5",
+	    "First": "John",
+	    "Last": "Doe",
+	    "Username": "john@homenet.com",
+	    "Organization": "Homenet",
+	    "Roles": [
+	    	"Guest"
+	    ],
+	    "Status": "active"
+	}, {
+	    "ID": "6",
+	    "First": "Jane",
+	    "Last": "Doe",
+	    "Username": "jane@homenet.com",
+	    "Organization": "Homenet",
+	    "Roles": [
+	    	"Normal User"
+	    ],
+	    "Status": "inactive"
+	}]
+}

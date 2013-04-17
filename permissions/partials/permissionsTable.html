@@ -1,0 +1,28 @@
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th style="min-width:330px;"></th>
+			<th ng-repeat="(i, header) in tableHeaders | filter:query.Roles" style="min-width:175px;">{{header.name}}</th>
+		</tr>
+	</thead>
+	<tbody ng-repeat="(i, module) in pagedData[currentPage]">
+		<tr class="dark" data-module="{{module.name}}">
+			<td sl-table-row-collapse style="min-width:330px;">
+				<h4><i class="icon-minus icon-white"></i> {{module.name}}</h4>
+			</td>
+			<td ng-repeat="role in module.roles | filter:query.Roles">
+				<div class="params btn-switch" data-sl-checkbox-switch="role.status" data-true-val="active" data-false-val="inactive" data-sl-checkbox-parent="role.name+'-'+i" data-sl-checkbox-group="role.name+'-'+i">
+					<input type="checkbox" name="chbox" />
+				</div>
+			</td>
+		</tr>
+		<tr data-module-permissions="{{module.name}}" ng-repeat="permissions in module.permissions">
+			<td><h5>{{permissions.name}}</h5><p class="muted">{{permissions.description}}</p></td>
+			<td ng-repeat="role in permissions.roles | filter:query.Roles" data-role="{{role.name}}">
+				<div class="params btn-switch" data-sl-checkbox-switch="role.status" data-true-val="active" data-false-val="inactive" data-sl-checkbox-group="role.name+'-'+i">
+					<input type="checkbox" name="chbox" />
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

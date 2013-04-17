@@ -1,0 +1,61 @@
+{
+	"modules": [
+	{
+		"parent": "User Module",
+		"name": "User Module",
+		"groupBy": "User Module",
+		"Administrator": "active",
+		"Power User": "active",
+		"Normal User": "inactive",
+		"Guest": "active",
+		"Group 1": "active",
+		"Group 2": "active",
+		"Group 3": "active"
+	},
+	{
+		"name": "Permission 1",
+		"groupBy": "User Module",
+		"Administrator": "active",
+		"Power User": "active",
+		"Normal User": "inactive",
+		"Guest": "inactive",
+		"Group 1": "active",
+		"Group 2": "active",
+		"Group 3": "active"
+	},
+	{
+		"parent": "Permissions Module",
+		"name": "Permissions Module",
+		"groupBy": "Permissions Module",
+		"Administrator": "active",
+		"Power User": "active",
+		"Normal User": "indeterminate",
+		"Guest": "inactive",
+		"Group 1": "active",
+		"Group 2": "active",
+		"Group 3": "active"
+	},
+	{
+		"name": "Permission 1",
+		"groupBy": "Permissions Module",
+		"Administrator": "active",
+		"Power User": "active",
+		"Normal User": "active",
+		"Guest": "inactive",
+		"Group 1": "active",
+		"Group 2": "active",
+		"Group 3": "active"
+	},
+	{
+		"name": "Permission 2",
+		"groupBy": "Permissions Module",
+		"Administrator": "active",
+		"Power User": "active",
+		"Normal User": "inactive",
+		"Guest": "inactive",
+		"Group 1": "active",
+		"Group 2": "active",
+		"Group 3": "active"
+	}
+	]
+}

@@ -1,0 +1,72 @@
+<div data-ng-controller="AddUserCtrl">
+    <div class="alert alert-error" data-ng-show="error.length > 0">{{error}}</div>
+    <div class="alert alert-success" data-ng-show="alert.length > 0">{{alert}}</div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+        <li><a href="#groups" data-toggle="tab">Groups</a></li>
+        <li><a href="#roles" data-toggle="tab">Roles</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active fade in" id="info">
+            <div class="row-fluid">
+                <div class="span3">
+                    <h5>Username:</h5>
+                    <input type="text" placeholder="john.doe@company.com" id="newUsername">
+                </div>
+                <div class="span3">
+                    <h5>Password:</h5>
+                    <input type="password" value="" id="newPassword">
+                </div>
+                <div class="span3">
+                    <h5>Enabled</h5>
+                    <div class="params btn-switch" ng-model="user.enabled" data-sl-checkbox-switch="user.enabled" data-true-val="true" data-false-val="false"><input type="checkbox" name="chbox" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in" id="groups">
+            <div class="row-fluid">
+                <div class="span6">
+                    <table class="groupsList table table-striped table-hover">
+                        <tbody>
+                            <tr ng-repeat="group in newRowGroups">                                    
+                                <td><span data-ng-controller="UserGroupsCtrl">{{group}}</span></td>
+                                <td><input type="submit" class="btn btn-mini white-btn pull-right" data-toggle="button" value="Remove" ng-click="removeUserFromGroup(group)"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form class="form-inline">
+                        <div class="control-group row-fluid">
+                            <input type="text" class="span6" data-provide="typeahead" ng-model="typeaheadGroups" sl-typeahead="groups">
+                            <input type="submit" class="btn btn-small white-btn nomargin" data-toggle="button" value="Add" ng-click="addUserToGroup()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade in" id="roles">
+            <div class="row-fluid">
+                <div class="span6">
+                    <table class="roleList table table-striped table-hover">
+                        <tbody>
+                            <tr ng-repeat="role in newRowRoles">
+                                <td><span data-ng-controller="UserRolesCtrl">{{role}}</span></td>
+                                <td><input type="submit" class="btn btn-mini white-btn pull-right" data-toggle="button" value="Remove" ng-click="removeRoleFromUser(role)"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form class="form-inline">
+                        <div class="control-group row-fluid">
+                            <input type="text" class="span6" data-provide="typeahead" ng-model="typeaheadRoles" sl-typeahead="roles" value="">
+                            <input type="submit" class="btn btn-small white-btn nomargin" data-toggle="button" value="Add" ng-click="addRoleToUser()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <button type="button" data-ng-class="{true:'green-btn',false:'orange-btn'}[userSaved]" class="btn btn-save nomargin" ng-click="addUser()">Create user</button>
+        </div>
+    </div>
+</div>

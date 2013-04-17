@@ -1,0 +1,77 @@
+<div id="editUserModal" data-ng-controller="EditUserCtrl">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Edit User</h3>
+    </div>
+    <div class="modal-body">
+		<div class="alert alert-error" data-ng-show="error.length > 0">{{error}}</div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+            <li><a href="#groups" data-toggle="tab">Groups</a></li>
+            <li><a href="#roles" data-toggle="tab">Roles</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active fade in" id="info">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h5>Username:</h5>
+                        <input type="text" ng-model="user.email">
+                    </div>
+                    <div class="span6">
+                        <h5>Change password:</h5>
+                        <input type="password" placeholder="password" ng-model="user.password">
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h5>Enabled</h5>
+                        <div class="params btn-switch" data-sl-checkbox-switch="user.enabled" data-true-val="true" data-false-val="false" data-sl-checkbox-parent="" data-sl-checkbox-group="" data-sl-checkbox-groupby=""><input type="checkbox" name="chbox" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="groups">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <table class="groupsList table table-striped table-hover">
+                            <tbody>
+                                <tr ng-repeat="group in userGroups">                                    
+                                    <td><span>{{group.name}}</span></td>
+                                    <td><input type="submit" class="btn btn-mini white-btn pull-right" data-toggle="button" value="Remove" ng-click="removeUserFromGroup(group.id)"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form class="form-inline">
+                            <div class="control-group row-fluid">
+                                <input type="text" class="span9" data-provide="typeahead" ng-model="typeaheadGroups" sl-typeahead="groups">
+                                <input type="submit" class="btn btn-small white-btn nomargin" data-toggle="button" value="Add" ng-click="addUserToGroup()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade in" id="roles">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <table class="roleList table table-striped table-hover">
+                            <tbody>
+                                <tr ng-repeat="role in userRoles">
+                                    <td><span>{{role.name}}</span></td>
+                                    <td><input type="submit" class="btn btn-mini white-btn pull-right" data-toggle="button" value="Remove" ng-click="removeRoleFromUser(role.id)"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <form class="form-inline">
+                            <div class="control-group row-fluid">
+                                <input type="text" class="span9" data-provide="typeahead" ng-model="typeaheadRoles" sl-typeahead="roles" value="">
+                                <input type="submit" class="btn btn-small white-btn nomargin" data-toggle="button" value="Add" ng-click="addRoleToUser()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" data-ng-class="{true:'green-btn',false:'orange-btn'}[userSaved]" class="btn btn-save" ng-click="saveUser(user.ID)">Save</button>
+    </div>
+</div>

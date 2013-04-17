@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+	<tbody ng-repeat="(i, module) in pagedData[currentPage]">
+		<tr class="dark" data-module="{{module.name}}">
+			<td sl-table-row-collapse style="min-width:330px;">
+				<h4><i class="icon-minus icon-white"></i> {{module.name}}</h4>
+			</td>
+			<td>
+				<div class="params btn-switch" data-sl-checkbox-switch="role.status" data-true-val="active" data-false-val="inactive">
+					<input type="checkbox" name="chbox" />
+				</div>
+			</td>
+		</tr>
+		<tr data-module-permissions="{{module.name}}" ng-repeat="permissions in module.permissions">
+			<td><h5>{{permissions.name}}</h5><p class="muted">{{permissions.description}}</p></td>
+			<td data-role="{{newRoleName}}">
+				<div class="params btn-switch" data-sl-checkbox-switch="role.status" data-true-val="active" data-false-val="inactive">
+					<input type="checkbox" name="chbox" />
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+

@@ -1,0 +1,31 @@
+<div id="removeRoleModal" data-ng-controller="RemoveRoleCtrl">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Remove Role</h3>
+    </div>
+    <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#info" data-toggle="tab">Info</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active fade in" id="info">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div sl-table-list="roles"></div>
+                        <!--<table class="roleList table table-striped table-hover">
+                            <tbody>
+                                <tr ng-repeat="role in roles">
+                                    <td><span>{{role.name}}</span></td>
+                                    <td><input type="submit" class="btn btn-mini white-btn pull-right" data-toggle="button" value="Remove" ng-click="removeRole(role.id)"></td>
+                                </tr>
+                            </tbody>
+                        </table>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!--<button type="button" class="btn orange-btn btn-save" ng-click="createRole()">Done</button>-->
+    </div>
+</div>
